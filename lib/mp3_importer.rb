@@ -5,7 +5,6 @@ class MP3Importer
   end
   def files
     Dir.children(path)
-    binding.pry
   end
   def import
     files.each { |filename| Song.new_by_filename(filename) }
